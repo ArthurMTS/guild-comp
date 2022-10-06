@@ -1,10 +1,10 @@
-import { Box } from "@mui/material";
+import { Router } from "components/Router";
 import React from "react";
 
 export const App: React.FC = () => {
  return (
-  <Box>
-    Hello, world
-  </Box>
+  <React.Fragment>
+    <Router />
+  </React.Fragment>
  );
 };
