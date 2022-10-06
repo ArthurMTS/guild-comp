@@ -1,4 +1,4 @@
-export const saveKey = (key: string) =>
+export const setKey = (key: string) =>
   localStorage.setItem("api_key", key);
 
 export const getKey = () => 
