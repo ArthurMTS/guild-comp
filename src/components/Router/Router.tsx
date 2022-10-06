@@ -1,11 +1,13 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Account } from "views/Account";
 import { Home } from "views/Home";
 
 export const Router: React.FC = () => (
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/account" element={<Account />} />
     </Routes>
   </BrowserRouter>
 );
