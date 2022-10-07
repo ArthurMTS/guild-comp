@@ -1,0 +1,29 @@
+.header {
+  background-color: #353545;
+  padding: 10px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  & nav:first-child {
+    border-bottom: 1px solid #E7E7E7;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+  }
+
+  a {
+    text-decoration: none;
+    color: #E7E7E7;
+    transition: all .2s;
+    font-size: 1.3rem;
+    margin: 0 5px;
+  }
+  a:hover {
+    color: #1976d2;
+  }
+  a.selected {
+    text-align: underline;
+    color: #1976d2;
+  }
+}
