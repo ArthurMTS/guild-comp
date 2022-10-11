@@ -8,11 +8,11 @@ export const Header: React.FC = () => {
   return (
     <Box component="header" className="header">
       <Box component="nav">
-        <Link to={AccountRoutes.accountHome}>Account</Link>
-        <Link to="/characters">Characters</Link>
-        <Link to="/pvp">PvP</Link>
-        <Link to="/wvw">WvW</Link>
-        <Link to="/worldbosses">WorldBosses</Link>
+        <Link primary to={AccountRoutes.accountHome}>Account</Link>
+        <Link primary to="/characters">Characters</Link>
+        <Link primary to="/pvp">PvP</Link>
+        <Link primary to="/wvw">WvW</Link>
+        <Link primary to="/worldbosses">WorldBosses</Link>
       </Box>
       <Box component="nav">
         <Link to={AccountRoutes.bank}>Bank</Link>
