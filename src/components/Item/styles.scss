@@ -1,0 +1,55 @@
+.itemContainer {
+  position: relative;
+}
+
+.itemWrapper {
+  height: 64px;
+  width: 64px;
+  cursor: pointer;
+}
+
+.nullItemWrapper {
+  height: 67px;
+  width: 67px;
+  background-color: #AAAAAA;
+}
+
+.itemDescription {
+  position: absolute;
+  top: 67px;
+  left: 0;
+  z-index: 1;
+  background-color: #313131;
+}
+
+.Junk {
+  border: 2px solid #AAAAAA;
+}
+
+.Basic {
+  border: 2px solid #000000;
+}
+
+.Fine {
+  border: 2px solid #62A4DA;
+}
+
+.Masterwork {
+  border: 2px solid #1a9306;
+}
+
+.Rare {
+  border: 2px solid #fcd00b;
+}
+
+.Exotic {
+  border: 2px solid #ffa405;
+}
+
+.Ascended {
+  border: 2px solid #fb3e8d;
+}
+
+.Legendary {
+  border: 2px solid #4C139D;
+}

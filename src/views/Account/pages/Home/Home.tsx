@@ -10,6 +10,7 @@ import {
   GuildInformation,
 } from "config/interfaces";
 import "./styles.scss";
+import { BagOfItems } from "components/BagOfItems";
 
 export interface AccountData {
   id: string;
@@ -126,6 +127,8 @@ export const Home: React.FC = () => {
           </Typography>
         </Box>
       </Box>
+
+      <BagOfItems path="/account/bank" />
     </Box>
   );
 };
