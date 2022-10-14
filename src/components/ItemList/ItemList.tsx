@@ -32,11 +32,11 @@ interface itemsInformation {
   }
 }
 
-interface BagOfItemsProps {
+interface ItemListProps {
   path: string;
 }
 
-export const BagOfItems: React.FC<BagOfItemsProps> = ({ path }) => {
+export const ItemList: React.FC<ItemListProps> = ({ path }) => {
   const [items, setItems] = React.useState<itemsInformation[]>([] as itemsInformation[]);
 
   React.useEffect(() => {
@@ -50,8 +50,14 @@ export const BagOfItems: React.FC<BagOfItemsProps> = ({ path }) => {
   }, [api]);
 
   return (
-    <Box className="bowWrapper">
-      {items?.map(item => <Item id={item?.id} count={item?.count} />)}
+    <Box className="itemListWrapper">
+      {items?.map((item, index) => 
+        <Item
+          key={index}
+          id={item?.id}
+          count={item?.count}
+        />
+      )}
     </Box>
   );
 };

@@ -15,11 +15,16 @@
 }
 
 .itemDescription {
+  height: 300px;
+  width: 250px;
+  display: none;
   position: absolute;
-  top: 67px;
-  left: 0;
   z-index: 1;
   background-color: #313131;
+}
+
+.itemWrapper:hover + .itemDescription {
+  //display: block;
 }
 
 .Junk {

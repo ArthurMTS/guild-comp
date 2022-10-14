@@ -1,11 +1,10 @@
 .mainAccountHome {
   background-color: #454555;
-  width: 100vw;
-  minHeight: 100vh;  
+  min-height: 100vh;  
 }
 
 .mainAccountGrid {
-  margin-top: 50px;
+  padding-top: 120px;
   display: flex;
   justify-content: center;
 }
