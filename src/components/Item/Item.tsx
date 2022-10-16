@@ -2,6 +2,7 @@ import { Card, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
 import { api } from "services/api";
+import { mousePosition } from "utils/mousePosition";
 import "./styles.scss";
 
 interface ItemsInformation {
@@ -12,8 +13,10 @@ interface ItemsInformation {
 }
 
 interface MouseCoord {
-  x: number;
-  y: number;
+  top?: number;
+  bottom?: number;
+  left?: number;
+  right?: number;
 }
 
 interface ItemProps {
@@ -42,11 +45,12 @@ export const Item: React.FC<ItemProps> = ({
     fecthData();
   }, [api]);
 
-  const onItemMouseOver = (event: React.MouseEvent<HTMLDivElement>) => {
-    const mousePos = {
-      x: event.nativeEvent.offsetX + 20,
-      y: -(event.nativeEvent.offsetY + 250),
-    };
+  const onItemMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
+    const x = event.pageX + 20;
+    const y = event.pageY + 20;
+    
+    const mousePos = mousePosition(x, y);
+
     setMouseCoord(mousePos);
   };
 
@@ -54,12 +58,12 @@ export const Item: React.FC<ItemProps> = ({
     <React.Fragment>
       {id ?
         <Box className="itemContainer">
-          <Box className="itemWrapper" onMouseMove={onItemMouseOver}>
+          <Box className="itemWrapper" onMouseMove={onItemMouseMove}>
             <img className={`${itemData.rarity}`} src={itemData.icon} alt={itemData.name} />
           </Box>
           <Card
             className="itemDescription"
-            //style={{ bottom: mouseCoord.y, left: mouseCoord.x }}
+            style={mouseCoord}
           >
             <Typography>{itemData.name}</Typography>
           </Card> 
